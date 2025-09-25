@@ -1,4 +1,4 @@
-// swift-tools-version: 6.2
+// swift-tools-version: 6.0
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -13,15 +13,21 @@ let package = Package(
         .library(
             name: "Butch",
             targets: ["Butch"]
-        ),
+        )
     ],
     targets: [
         .target(
-            name: "Butch"
+            name: "Butch",
+            path: ".",
+            sources: [
+                "Components",
+                "Tokens"
+            ]
         ),
         .testTarget(
             name: "ButchTests",
-            dependencies: ["Butch"]
-        ),
+            dependencies: ["Butch"],
+            path: "Tests"
+        )
     ]
 )
