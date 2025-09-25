@@ -1,5 +1,5 @@
 //
-//  Spacings.swift
+//  SpacingTokens.swift
 //  Butch
 //
 //  Created by Leo Heuser on 25.09.25.
