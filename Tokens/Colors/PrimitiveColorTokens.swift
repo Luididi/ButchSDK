@@ -7,10 +7,9 @@
 
 import SwiftUI
 
-/// Alpha-basierte Primitive Color Tokens - 3 Basis-Scales
 public extension Color {
     
-    // MARK: - Black Alpha Scale (für dunkle Elemente auf hellen Hintergründen)
+    // MARK: - Black Alpha Scale
     
     static let blackAlpha100 = Color(.sRGB, red: 0, green: 0, blue: 0, opacity: 1.0)   // Vollschwarz
     static let blackAlpha090 = Color(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.9)   // 90% Schwarz
@@ -23,7 +22,7 @@ public extension Color {
     static let blackAlpha020 = Color(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.2)   // 20% Schwarz
     static let blackAlpha010 = Color(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.1)   // 10% Schwarz
     
-    // MARK: - White Alpha Scale (für helle Elemente auf dunklen Hintergründen)
+    // MARK: - White Alpha Scale
     
     static let whiteAlpha100 = Color(.sRGB, red: 1, green: 1, blue: 1, opacity: 1.0)   // Vollweiß
     static let whiteAlpha090 = Color(.sRGB, red: 1, green: 1, blue: 1, opacity: 0.9)   // 90% Weiß
@@ -36,9 +35,9 @@ public extension Color {
     static let whiteAlpha020 = Color(.sRGB, red: 1, green: 1, blue: 1, opacity: 0.2)   // 20% Weiß
     static let whiteAlpha010 = Color(.sRGB, red: 1, green: 1, blue: 1, opacity: 0.1)   // 10% Weiß
     
-    // MARK: - Orange Alpha Scale (für accent-basierte Elemente)
+    // MARK: - Orange Alpha Scale
     
-    static let orangeAlpha100 = Color(.sRGB, red: 1.0, green: 0.451, blue: 0.2, opacity: 1.0)   // Voll-Orange (orange050)
+    static let orangeAlpha100 = Color(.sRGB, red: 1.0, green: 0.451, blue: 0.2, opacity: 1.0)   // Voll-Orange
     static let orangeAlpha090 = Color(.sRGB, red: 1.0, green: 0.451, blue: 0.2, opacity: 0.9)   // 90% Orange
     static let orangeAlpha080 = Color(.sRGB, red: 1.0, green: 0.451, blue: 0.2, opacity: 0.8)   // 80% Orange
     static let orangeAlpha070 = Color(.sRGB, red: 1.0, green: 0.451, blue: 0.2, opacity: 0.7)   // 70% Orange
