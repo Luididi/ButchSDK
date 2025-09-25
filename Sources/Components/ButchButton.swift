@@ -78,18 +78,12 @@ extension ButchButton {
                 .background(.clear)
                 .overlay(
                     RoundedRectangle(cornerRadius: .infinity)
-                        .strokeBorder(Color.buttonBorder, lineWidth: 1)
+                        .strokeBorder(.gray, lineWidth: 1)
                 )
                 .scaleEffect(configuration.isPressed ? 0.95 : 1.0)
                 .animation(.easeInOut(duration: 0.1), value: configuration.isPressed)
         }
     }
-}
-
-// MARK: - Semantic Color Tokens
-extension Color {
-    /// Button border - backgrounds/elementOutline aus Figma
-    static let buttonBorder = Color("buttonBorder")  // #99999933
 }
 
 // MARK: - Example of Use and Preview
