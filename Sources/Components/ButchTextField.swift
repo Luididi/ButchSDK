@@ -39,6 +39,10 @@ public struct ButchTextField: View {
             RoundedRectangle(cornerRadius: .infinity)
                 .strokeBorder(.secondary, lineWidth: 1)
         )
+        .contentShape(RoundedRectangle(cornerRadius: .infinity))
+        .onTapGesture {
+            isFocused = true
+        }
     }
     
     private func clearText() {
@@ -64,7 +68,6 @@ extension ButchTextField {
         }
     }
 } // extension
-
 
 // MARK: - Example of Use and Preview
 #Preview {
