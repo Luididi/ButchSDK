@@ -12,6 +12,7 @@ public struct ButchTextField: View {
     @Binding private var text: String
     @FocusState private var isFocused: Bool
     
+    private let basePadding: CGFloat = .spacing8
     private let placeholder: LocalizedStringKey
     
     public init(_ placeholder: LocalizedStringKey, text: Binding<String>) {
@@ -31,9 +32,9 @@ public struct ButchTextField: View {
                 .opacity(text.isEmpty ? 0 : 1)
                 .animation(.bouncy(duration: 0.3), value: text.isEmpty)
         }
-        .padding(.leading, 16)
-        .padding(.trailing, 8)
-        .padding(.vertical, 8)
+        .padding(.leading, basePadding * 2)
+        .padding(.trailing, basePadding)
+        .padding(.vertical, basePadding)
         .background(.clear)
         .overlay(
             RoundedRectangle(cornerRadius: .infinity)
@@ -53,9 +54,8 @@ public struct ButchTextField: View {
 
 // MARK: - Component Parts
 extension ButchTextField {
-    
     /// The clear button is used for the function to set the whole string to empty.
-    struct ClearButton: View {
+    private struct ClearButton: View {
         let action: () -> Void
         
         var body: some View {
