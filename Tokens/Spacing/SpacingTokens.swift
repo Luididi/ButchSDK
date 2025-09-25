@@ -8,6 +8,7 @@
 import Foundation
 
 public extension CGFloat {
+    
     static let spacing4: CGFloat = 4
     
     static let spacing8: CGFloat = 8
