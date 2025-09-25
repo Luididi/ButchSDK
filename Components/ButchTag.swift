@@ -24,7 +24,7 @@ public struct ButchTag: View {
             .background(.clear)
             .overlay(
                 RoundedRectangle(cornerRadius: .infinity)
-                    .strokeBorder(Color.gray080, lineWidth: 1)
+                    .strokeBorder(Color.borderLight, lineWidth: 1)
             )
     }
 }
