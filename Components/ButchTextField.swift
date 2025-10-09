@@ -12,17 +12,28 @@ public struct ButchTextField: View {
     @Binding private var text: String
     @FocusState private var isFocused: Bool
     
-    private let basePadding: CGFloat = .spacing8
     private let placeholder: LocalizedStringKey
+    private let leadingIcon: String?
     
-    public init(_ placeholder: LocalizedStringKey, text: Binding<String>) {
+    public init(
+        _ placeholder: LocalizedStringKey,
+        text: Binding<String>,
+        leadingIcon: String? = nil,
+        
+    ) {
         self.placeholder = placeholder
         self._text = text
+        self.leadingIcon = leadingIcon
+        
     }
     
     // MARK: - Component
     public var body: some View {
         HStack(spacing: 8) {
+            if let icon = leadingIcon {
+                LeadingIcon(systemName: icon)
+            }
+            
             TextField(placeholder, text: $text)
                 .focused($isFocused)
                 .foregroundStyle(.primary)
@@ -32,18 +43,14 @@ public struct ButchTextField: View {
                 .opacity(text.isEmpty ? 0 : 1)
                 .animation(.bouncy(duration: 0.3), value: text.isEmpty)
         }
-        .padding(.leading, basePadding * 2)
-        .padding(.trailing, basePadding)
-        .padding(.vertical, basePadding)
-        .background(.clear)
+        .padding(.leading, .spacing16)
+        .padding(.trailing, .spacing8)
+        .padding(.vertical, .spacing8)
+        .clipShape(Capsule())
         .overlay(
-            RoundedRectangle(cornerRadius: .infinity)
-                .strokeBorder(.secondary, lineWidth: 1)
+            Capsule()
+                .strokeBorder(.tertiary.opacity(0.4), lineWidth: 1)
         )
-        .contentShape(RoundedRectangle(cornerRadius: .infinity))
-        .onTapGesture {
-            isFocused = true
-        }
     }
     
     private func clearText() {
@@ -54,25 +61,67 @@ public struct ButchTextField: View {
 
 // MARK: - Component Parts
 extension ButchTextField {
-    /// The clear button is used for the function to set the whole string to empty.
-    private struct ClearButton: View {
-        let action: () -> Void
+    /// Leading icon displayed at the start of the text field.
+    private struct LeadingIcon: View {
+        let systemName: String
         
         var body: some View {
-            Button(action: action) {
+            Image(systemName: systemName)
+                .font(.system(size: 16))
+                .foregroundStyle(.secondary)
+                .frame(width: 24, height: 24)
+        }
+    }
+    
+    /// Clear button to empty the text field.
+    private struct ClearButton: View {
+        let action: () -> Void
+        @State private var triggerFeedback = false
+        
+        var body: some View {
+            Button(action: {
+                triggerFeedback.toggle()
+                action()
+            }) {
                 Image(systemName: "xmark.circle.fill")
                     .font(.system(size: 16))
                     .foregroundStyle(.primary)
             }
             .buttonStyle(.plain)
+            .sensoryFeedback(.impact(flexibility: .soft), trigger: triggerFeedback)
         }
     }
-} // extension
+}
 
-// MARK: - Example of Use and Preview
-#Preview {
+// MARK: - Example
+#Preview("Standard") {
     @Previewable @State var text = ""
     
     ButchTextField("textfield.placeholder", text: $text)
         .padding()
+}
+
+#Preview("With Icon") {
+    @Previewable @State var text = ""
+    
+    ButchTextField(
+        "textfield.placeholder",
+        text: $text,
+        leadingIcon: "camera"
+    )
+    .padding()
+}
+
+#Preview("Glass Effect") {
+    @Previewable @State var text = ""
+    
+    ZStack {
+        Color.blue.ignoresSafeArea()
+        
+        ButchTextField(
+            "textfield.placeholder",
+            text: $text,
+        )
+        .padding()
+    }
 }
