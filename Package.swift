@@ -4,20 +4,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "Butch",
+    name: "ButchSDK",
     platforms: [
         .iOS(.v17),
         .macOS(.v14)
     ],
     products: [
         .library(
-            name: "Butch",
-            targets: ["Butch"]
+            name: "ButchSDK",
+            targets: ["ButchSDK"]
         )
     ],
     targets: [
         .target(
-            name: "Butch",
+            name: "ButchSDK",
             path: ".",
             sources: [
                 "Components",
@@ -26,7 +26,7 @@ let package = Package(
         ),
         .testTarget(
             name: "ButchTests",
-            dependencies: ["Butch"],
+            dependencies: ["ButchSDK"],
             path: "Tests"
         )
     ]
